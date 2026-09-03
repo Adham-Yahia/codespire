@@ -1,0 +1,107 @@
+{
+  "header": {
+    "logo": "CodeSpire",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Welcome to CodeSpire",
+    "description": "Your comprehensive guidance hub for Computer Science and AI education. Explore career paths, learn essential skills, and connect with a community of learners.",
+    "exploreAI": "Explore AI",
+    "exploreDataScience": "Explore Data Science",
+    "searchPlaceholder": "Search for learning paths, careers, skills...",
+    "searchTips": "Tips: Search by field name, career title, or skill",
+    "searchResults": "Search Results",
+    "noResults": "No results found for"
+  },
+  "searchBar": {
+    "placeholder": "Search for learning paths, careers, skills...",
+    "tips": "Search by field name, career title, or skill",
+    "field": "Field",
+    "career": "Career"
+  },
+  "fields": {
+    "ai": {
+      "name": "Artificial Intelligence",
+      "description": "Explore the fascinating world of AI, from machine learning to deep learning and neural networks.",
+      "roadmap": "AI Learning Roadmap",
+      "skills": "Essential AI Skills",
+      "courses": "Recommended AI Courses",
+      "opportunities": "AI Career Opportunities"
+    },
+    "dataScience": {
+      "name": "Data Science",
+      "description": "Master data analysis, visualization, and insights extraction from complex datasets.",
+      "roadmap": "Data Science Learning Roadmap",
+      "skills": "Essential Data Science Skills",
+      "courses": "Recommended Data Science Courses",
+      "opportunities": "Data Science Career Opportunities"
+    }
+  },
+  "fieldDetail": {
+    "back": "Back to Fields",
+    "marketAverage": "Market Average Salary",
+    "hiringRate": "Hiring Rate"
+  },
+  "careerOpportunities": {
+    "title": "Career Opportunities",
+    "position": "Position",
+    "salary": "Salary",
+    "hiringRate": "Hiring Rate",
+    "marketAverage": "Market Average",
+    "description": "Description"
+  },
+  "learningRoadmap": {
+    "title": "Learning Roadmap",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "essentialSkills": {
+    "title": "Essential Skills",
+    "technical": "Technical",
+    "soft": "Soft Skills"
+  },
+  "courseRecommendations": {
+    "title": "Course Recommendations",
+    "platform": "Platform",
+    "level": "Level",
+    "duration": "Duration",
+    "price": "Price",
+    "free": "Free",
+    "paid": "Paid"
+  },
+  "community": {
+    "title": "Community",
+    "discussions": "Discussions",
+    "comments": "Comments",
+    "post": "Post",
+    "reply": "Reply",
+    "writeComment": "Write a comment...",
+    "name": "Name",
+    "email": "Email",
+    "comment": "Comment",
+    "submit": "Submit"
+  },
+  "footer": {
+    "brand": "CodeSpire",
+    "tagline": "Your pathway to tech excellence",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "customerSupport": "Customer Support",
+    "facebook": "Facebook",
+    "email": "Email",
+    "copyright": "© 2024 CodeSpire. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit"
+  }
+}

@@ -1,0 +1,269 @@
+/* RTL Support for Arabic Language */
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] * {
+  text-align: inherit;
+}
+
+/* Navbar RTL */
+html[dir="rtl"] .navbar-brand {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .navbar-collapse {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .navbar .nav {
+  flex-direction: row-reverse;
+}
+
+/* Hero Section RTL */
+html[dir="rtl"] .hero-section {
+  text-align: center;
+}
+
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .hero-description {
+  text-align: center;
+}
+
+/* Search Bar RTL */
+html[dir="rtl"] .search-input-group {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .search-icon {
+  order: 2;
+}
+
+html[dir="rtl"] .search-input {
+  text-align: right;
+}
+
+html[dir="rtl"] .clear-button {
+  order: 1;
+}
+
+html[dir="rtl"] .search-suggestions {
+  left: auto;
+  right: 0;
+}
+
+/* Suggestion Item RTL */
+html[dir="rtl"] .suggestion-item {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .suggestion-icon {
+  order: 2;
+}
+
+html[dir="rtl"] .suggestion-content {
+  text-align: right;
+  order: 1;
+}
+
+html[dir="rtl"] .suggestion-type {
+  order: 0;
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+/* Footer RTL */
+html[dir="rtl"] .footer-links {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+html[dir="rtl"] .support-options {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .support-link {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .support-divider {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/* Language Toggle RTL */
+html[dir="rtl"] .language-toggle {
+  flex-direction: row-reverse;
+}
+
+/* Theme Toggle RTL */
+html[dir="rtl"] .theme-toggle {
+  flex-direction: row-reverse;
+}
+
+/* Cards RTL */
+html[dir="rtl"] .card {
+  text-align: right;
+}
+
+html[dir="rtl"] .card-body {
+  text-align: right;
+}
+
+/* Result Card RTL */
+html[dir="rtl"] .result-card {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="rtl"] .result-icon {
+  order: 2;
+}
+
+html[dir="rtl"] .result-content {
+  text-align: right;
+  order: 1;
+}
+
+html[dir="rtl"] .result-badge {
+  order: 0;
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+/* List Items RTL */
+html[dir="rtl"] ul {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+html[dir="rtl"] li {
+  text-align: right;
+}
+
+/* Buttons and Controls RTL */
+html[dir="rtl"] .btn {
+  text-align: center;
+}
+
+html[dir="rtl"] .d-flex {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .gap-2 {
+  margin-left: 0;
+  margin-right: 0;
+  gap: 0.5rem;
+}
+
+html[dir="rtl"] .gap-3 {
+  gap: 1rem;
+}
+
+html[dir="rtl"] .me-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .ms-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+html[dir="rtl"] .mb-5 {
+  margin-bottom: 3rem;
+}
+
+/* Badge and Labels RTL */
+html[dir="rtl"] .badge {
+  text-align: center;
+}
+
+/* Tips Section RTL */
+html[dir="rtl"] .search-tips {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .tips-label {
+  order: 2;
+}
+
+html[dir="rtl"] .tips-text {
+  order: 1;
+  text-align: right;
+}
+
+/* Utilities - Margin RTL */
+html[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .mr-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .pl-2 {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+html[dir="rtl"] .pr-2 {
+  padding-left: 0.5rem;
+  padding-right: 0;
+}
+
+/* Text Direction */
+html[dir="rtl"] .text-center {
+  text-align: center;
+}
+
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* Breadcrumb RTL */
+html[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+/* Form Controls RTL */
+html[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+html[dir="rtl"] .form-control::placeholder {
+  text-align: right;
+}
+
+/* Modal RTL */
+html[dir="rtl"] .modal-header {
+  flex-direction: row-reverse;
+}
+
+/* Dropdown RTL */
+html[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html[dir="rtl"] * {
+    animation: none;
+    transition: none;
+  }
+}

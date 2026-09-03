@@ -1,0 +1,174 @@
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.08);
+}
+
+.dark-mode .skills-container {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
+  border-color: rgba(102, 126, 234, 0.25);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.12);
+}
+
+.skill-badge {
+  animation: slideIn 0.4s ease-out;
+}
+
+.skill-badge.dark {
+  /* Dark mode specific styling if needed */
+}
+
+.skill-badge.light {
+  /* Light mode specific styling if needed */
+}
+
+.skill-badge-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-badge-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+  transition: left 0.3s ease;
+}
+
+.skill-badge-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.skill-badge-content:hover::before {
+  left: 100%;
+}
+
+.dark-mode .skill-badge-content {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .skill-badge-content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.skill-name {
+  font-weight: 700;
+  display: inline;
+}
+
+.skill-level {
+  opacity: 0.8;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   SKILL BADGE VARIANTS - BY LEVEL
+   ============================================ */
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #fa5252 100%) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%) !important;
+  color: #1a1a1a !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, #74c0fc 0%, #4c6ef5 100%) !important;
+}
+
+.dark-mode .badge.bg-warning {
+  color: #000 !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .skill-badge-content {
+    padding: 8px 14px !important;
+    font-size: 13px;
+  }
+
+  .skill-level {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-container {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .skill-badge-content {
+    padding: 7px 12px !important;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .skill-name {
+    font-size: 12px;
+  }
+
+  .skill-level {
+    font-size: 10px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.skill-badge-content:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-badge {
+    animation: none;
+  }
+
+  .skill-badge-content {
+    transition: none;
+  }
+}

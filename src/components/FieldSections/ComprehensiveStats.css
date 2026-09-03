@@ -1,0 +1,346 @@
+/* ComprehensiveStats Component Styles */
+
+.stats-section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+}
+
+.stats-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stats-subtitle {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Stat Cards */
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card.light {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.stat-card.dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+}
+
+.stat-card.dark:hover {
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-value.hiring-rate {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-description {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Salary Ranges Section */
+.salary-ranges-section {
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.salary-ranges-section.light {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.salary-ranges-section.dark {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.salary-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #667eea;
+}
+
+.salary-ranges-section.dark .salary-section-title {
+  color: #a78bfa;
+}
+
+/* Salary Region Cards */
+.salary-region {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.salary-region.light {
+  background: #fff;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.salary-region.dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.salary-region.gcc {
+  border-left: 4px solid #ffd43b;
+}
+
+.salary-region.global {
+  border-left: 4px solid #51cf66;
+}
+
+.salary-region:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+}
+
+.region-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.region-flag {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.region-name {
+  flex: 1;
+}
+
+.salary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.salary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.salary-label {
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.salary-value {
+  font-weight: 500;
+  text-align: right;
+}
+
+.salary-value.salary-highlight {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.salary-region.dark .salary-value.salary-highlight {
+  color: #a78bfa;
+}
+
+/* Insights Section */
+.insights-section {
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.insights-section.light {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.insights-section.dark {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.insights-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #667eea;
+}
+
+.insights-section.dark .insights-title {
+  color: #a78bfa;
+}
+
+.insight-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.insight-card.light {
+  background: #fff;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.insight-card.dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.insight-card:hover {
+  transform: translateX(8px);
+}
+
+.insight-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.insight-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-title {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .salary-ranges-section,
+  .insights-section {
+    padding: 1.5rem;
+  }
+
+  .salary-section-title,
+  .insights-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-section-header {
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .stats-title {
+    font-size: 1.3rem;
+  }
+
+  .stats-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem;
+  }
+
+  .stat-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .salary-region {
+    padding: 1rem;
+  }
+
+  .region-header {
+    font-size: 1rem;
+  }
+
+  .salary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .insight-card {
+    padding: 0.75rem;
+  }
+}

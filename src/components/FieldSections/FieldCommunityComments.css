@@ -1,0 +1,236 @@
+.comment-card {
+  border: 1px solid rgba(102, 126, 234, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.comment-card.light {
+  background-color: #fff;
+}
+
+.comment-card.dark {
+  background-color: #1e1e1e;
+  border-color: rgba(102, 126, 234, 0.25);
+}
+
+.comment-input {
+  border: 1px solid rgba(102, 126, 234, 0.2) !important;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.comment-input:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  background-color: #fff;
+}
+
+.comment-input.dark {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+.comment-input.dark:focus {
+  background-color: #333;
+}
+
+.comment-submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.comment-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.comment-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comments-section {
+  margin-top: 24px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-state p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.comment-item {
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(102, 126, 234, 0.02);
+  margin-bottom: 12px;
+  border: 1px solid rgba(102, 126, 234, 0.08);
+  transition: all 0.3s ease;
+  animation: slideInComment 0.3s ease-out;
+}
+
+.comment-item.dark {
+  background: rgba(102, 126, 234, 0.05);
+  border-color: rgba(102, 126, 234, 0.15);
+}
+
+.comment-item:hover {
+  background: rgba(102, 126, 234, 0.06);
+  border-color: rgba(102, 126, 234, 0.15);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.comment-item.dark:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+@keyframes slideInComment {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.comment-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comment-date {
+  font-size: 12px;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edited-badge {
+  display: inline-block;
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  background: none;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.4);
+  transform: scale(1.1);
+}
+
+.edit-btn:hover {
+  background: rgba(102, 126, 234, 0.15);
+}
+
+.delete-btn:hover {
+  background: rgba(220, 53, 69, 0.1);
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.comment-text {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.edit-section {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.edit-input {
+  border: 1px solid rgba(102, 126, 234, 0.2) !important;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.edit-input:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.edit-input.dark {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-actions button {
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+@media (max-width: 576px) {
+  .comment-header {
+    flex-direction: column;
+  }
+
+  .comment-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .comment-item {
+    padding: 12px;
+  }
+
+  .empty-state {
+    padding: 30px 15px;
+  }
+}

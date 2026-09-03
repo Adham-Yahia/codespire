@@ -44,7 +44,7 @@ const Footer = ({ onNavClick }) => {
             <h5 className="footer-title">{t('footer.customerSupport', language)}</h5>
             <div className="support-options">
               <a 
-                href="https://www.facebook.com/codespire" 
+                href="https://www.facebook.com/share/1DmD6Bj3Wg/?mibextid=wwXIfr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="support-link facebook-link"
@@ -56,7 +56,7 @@ const Footer = ({ onNavClick }) => {
               </a>
               <div className="support-divider"></div>
               <a 
-                href="mailto:support@codespire.com" 
+                href="mailto:adhemyahia2@gmail.com" 
                 className="support-link email-link"
                 title={`${t('footer.support', language)} - ${t('footer.email', language)}`}
                 aria-label={`${t('footer.support', language)} ${t('footer.email', language)}`}

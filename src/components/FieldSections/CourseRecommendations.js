@@ -22,7 +22,7 @@ const CourseRecommendations = ({ courses }) => {
                     <span className="platform-badge">{course.platform}</span>
                   </div>
                   
-                  <Card.Subtitle className="mb-3 text-muted">Topics</Card.Subtitle>
+                  <Card.Subtitle className={`mb-3 ${isDarkMode ? 'text-light' : 'text-muted'}`}>Topics</Card.Subtitle>
                   
                   <div className="topics-list">
                     {course.topics.map((topic, topicIndex) => (
@@ -34,7 +34,7 @@ const CourseRecommendations = ({ courses }) => {
                 </Card.Body>
                 
                 <div className="course-footer">
-                  <small className="text-muted">Recommended for learners at all levels</small>
+                  <small className={isDarkMode ? 'text-light' : 'text-muted'}>Recommended for learners at all levels</small>
                 </div>
               </Card>
             </Col>

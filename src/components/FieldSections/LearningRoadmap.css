@@ -36,9 +36,10 @@
   font-size: 16px;
 }
 
-.dark-mode .roadmap-accordion .accordion-button {
+.dark-mode .roadmap-accordion .accordion-button,
+.roadmap-accordion.dark .accordion-button {
   background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-  color: #e8eaed;
+  color: #f1f5f9;
 }
 
 .roadmap-accordion .accordion-button:not(.collapsed) {
@@ -47,8 +48,10 @@
   box-shadow: inset 0 -2px 0 rgba(102, 126, 234, 0.2);
 }
 
-.dark-mode .roadmap-accordion .accordion-button:not(.collapsed) {
-  color: #a8b5f5;
+.dark-mode .roadmap-accordion .accordion-button:not(.collapsed),
+.roadmap-accordion.dark .accordion-button:not(.collapsed) {
+  color: #818cf8;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
 }
 
 .roadmap-accordion .accordion-button:focus {
@@ -89,12 +92,25 @@
   font-size: 16px;
   font-weight: 700;
   margin: 0;
+  color: #202124;
+}
+
+.dark-mode .phase-name,
+.roadmap-accordion.dark .phase-name {
+  color: #f1f5f9;
 }
 
 .phase-duration {
   font-size: 13px;
   opacity: 0.65;
   font-weight: 500;
+  color: #5f6368;
+}
+
+.dark-mode .phase-duration,
+.roadmap-accordion.dark .phase-duration {
+  color: #cbd5e1;
+  opacity: 0.9;
 }
 
 .topics-list {
@@ -112,8 +128,9 @@
   color: #5f6368;
 }
 
-.dark-mode .topic-item {
-  color: #bdc1c6;
+.dark-mode .topic-item,
+.roadmap-accordion.dark .topic-item {
+  color: #e2e8f0;
 }
 
 .topic-item::before {
@@ -124,6 +141,11 @@
   font-weight: 900;
   font-size: 16px;
   line-height: 1;
+}
+
+.dark-mode .topic-item::before,
+.roadmap-accordion.dark .topic-item::before {
+  color: #818cf8;
 }
 
 .videos-list {
@@ -173,16 +195,18 @@
   left: 100%;
 }
 
-.dark-mode .video-link {
+.dark-mode .video-link,
+.roadmap-accordion.dark .video-link {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
   border-color: rgba(102, 126, 234, 0.2);
-  color: #a8b5f5;
+  color: #60a5fa;
 }
 
-.dark-mode .video-link:hover {
+.dark-mode .video-link:hover,
+.roadmap-accordion.dark .video-link:hover {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
   border-color: rgba(102, 126, 234, 0.35);
-  color: #d4a5ff;
+  color: #93c5fd;
 }
 
 .video-icon {
@@ -215,8 +239,9 @@
   color: #202124;
 }
 
-.dark-mode .roadmap-accordion .accordion-body {
-  color: #e8eaed;
+.dark-mode .roadmap-accordion .accordion-body,
+.roadmap-accordion.dark .accordion-body {
+  color: #e2e8f0;
 }
 
 .roadmap-accordion .accordion-body h5 {
@@ -228,8 +253,9 @@
   letter-spacing: 0.5px;
 }
 
-.dark-mode .roadmap-accordion .accordion-body h5 {
-  color: #a8b5f5;
+.dark-mode .roadmap-accordion .accordion-body h5,
+.roadmap-accordion.dark .accordion-body h5 {
+  color: #818cf8;
 }
 
 /* ============================================
@@ -238,67 +264,31 @@
 
 @media (max-width: 768px) {
   .roadmap-accordion .accordion-button {
-    padding: 18px;
-    font-size: 15px;
-  }
-
-  .roadmap-header {
-    gap: 12px;
-  }
-
-  .phase-name {
-    font-size: 15px;
-  }
-
-  .phase-number {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-  }
-
-  .phase-duration {
-    font-size: 12px;
-  }
-
-  .roadmap-accordion .accordion-body {
-    padding: 20px;
-  }
-
-  .topic-item {
-    padding: 10px 0;
-    padding-left: 24px;
-    font-size: 14px;
-  }
-
-  .video-link {
-    padding: 12px 14px;
-    font-size: 13px;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .roadmap-accordion .accordion-button {
     padding: 16px;
     font-size: 14px;
   }
 
   .roadmap-header {
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .phase-name {
     font-size: 14px;
+    min-width: 100%;
   }
 
   .phase-number {
     width: 32px;
     height: 32px;
-    font-size: 13px;
+    font-size: 12px;
+    flex-shrink: 0;
   }
 
   .phase-duration {
-    font-size: 11px;
+    font-size: 12px;
+    min-width: 100%;
+    padding-left: 42px;
   }
 
   .roadmap-accordion .accordion-body {
@@ -306,8 +296,8 @@
   }
 
   .roadmap-accordion .accordion-body h5 {
-    font-size: 13px;
-    margin-bottom: 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
   }
 
   .topic-item {
@@ -316,26 +306,115 @@
     font-size: 13px;
   }
 
-  .topics-list {
-    margin-bottom: 16px;
+  .topic-item::before {
+    font-size: 14px;
   }
 
   .videos-list {
-    gap: 10px;
+    gap: 8px;
   }
 
   .video-link {
-    padding: 11px 12px;
+    padding: 10px 12px;
     font-size: 12px;
     gap: 8px;
+    flex-wrap: nowrap;
   }
 
   .video-icon {
     font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  .video-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .video-external {
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .roadmap-accordion .accordion-button {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .roadmap-header {
+    gap: 8px;
+  }
+
+  .phase-info {
+    width: 100%;
+  }
+
+  .phase-name {
+    font-size: 13px;
+  }
+
+  .phase-number {
+    width: 30px;
+    height: 30px;
     font-size: 11px;
+  }
+
+  .phase-duration {
+    font-size: 11px;
+    padding-left: 38px;
+  }
+
+  .roadmap-accordion .accordion-body {
+    padding: 12px;
+  }
+
+  .roadmap-accordion .accordion-body h5 {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .topics-list {
+    margin-bottom: 12px;
+  }
+
+  .topic-item {
+    padding: 6px 0;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .topic-item::before {
+    font-size: 12px;
+  }
+
+  .videos-list {
+    gap: 6px;
+  }
+
+  .video-link {
+    padding: 8px 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .video-icon {
+    font-size: 10px;
+  }
+
+  .video-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .video-external {
+    font-size: 9px;
   }
 }
 

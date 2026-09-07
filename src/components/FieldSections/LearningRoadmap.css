@@ -1,5 +1,5 @@
 .roadmap-accordion {
-  border: 2px solid rgba(102, 126, 234, 0.15);
+  border: 2px solid #e0dddd;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.08);
@@ -7,9 +7,9 @@
 }
 
 .roadmap-accordion.dark {
-  border-color: rgba(102, 126, 234, 0.25);
+  border-color: #36454f;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.12);
-  background: #1a1f2e;
+  background: #192129;
 }
 
 .roadmap-accordion .accordion-item {
@@ -23,7 +23,7 @@
 }
 
 .dark-mode .roadmap-accordion .accordion-item {
-  border-bottom-color: rgba(102, 126, 234, 0.15);
+  border-bottom-color: rgba(200, 129, 16, 0.15);
 }
 
 .roadmap-accordion .accordion-button {
@@ -38,7 +38,7 @@
 
 .dark-mode .roadmap-accordion .accordion-button,
 .roadmap-accordion.dark .accordion-button {
-  background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  background: 192129;
   color: #f1f5f9;
 }
 
@@ -137,7 +137,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #000;
   font-weight: 900;
   font-size: 16px;
   line-height: 1;
@@ -145,7 +145,7 @@
 
 .dark-mode .topic-item::before,
 .roadmap-accordion.dark .topic-item::before {
-  color: #818cf8;
+  color: #fff;
 }
 
 .videos-list {
@@ -163,7 +163,7 @@
   border: 2px solid rgba(102, 126, 234, 0.15);
   border-radius: 10px;
   text-decoration: none;
-  color: #667eea;
+  color: #000;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   font-size: 14px;
   font-weight: 500;
@@ -199,7 +199,7 @@
 .roadmap-accordion.dark .video-link {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
   border-color: rgba(102, 126, 234, 0.2);
-  color: #60a5fa;
+  color: #ccc;
 }
 
 .dark-mode .video-link:hover,
@@ -247,7 +247,7 @@
 .roadmap-accordion .accordion-body h5 {
   font-weight: 700;
   font-size: 15px;
-  color: #667eea;
+  color: #000;
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -255,7 +255,7 @@
 
 .dark-mode .roadmap-accordion .accordion-body h5,
 .roadmap-accordion.dark .accordion-body h5 {
-  color: #818cf8;
+  color: #ccc;
 }
 
 /* ============================================

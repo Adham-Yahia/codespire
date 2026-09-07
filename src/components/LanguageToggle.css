@@ -5,12 +5,12 @@
   gap: 8px;
   padding: 8px 12px;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  border: 2px solid #667eea;
+  border: 2px solid #a09b9b;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: #667eea;
+  color: gray;
   transition: all 0.3s ease;
   font-family: inherit;
 }

@@ -144,29 +144,29 @@ export const fieldData = {
   dataScience: {
     id: 'dataScience',
     name: 'Data Science',
-    description: 'Data Science is an interdisciplinary field that combines statistics, mathematics, computer science, and domain expertise to extract meaningful insights from data. Data scientists work with large datasets to uncover patterns, trends, and correlations that can drive business decisions and scientific discoveries. This field is perfect for those who love working with data and want to make a significant impact through data-driven insights.',
+    description: 'Master data analysis, visualization, and insights extraction from complex datasets.',
     employmentStats: {
-      jobOpenings: 18200,
-      avgHiringRate: 76.8,
+      jobOpenings: 25400,
+      avgHiringRate: 82.5,
       jobGrowth: 22.3,
       marketDemand: 'Very High',
       salaryRanges: {
         egypt: {
           min: 18000,
-          max: 75000,
-          average: 46500,
+          max: 25000,
+          average: 21500,
           currency: 'EGP'
         },
         gcc: {
-          min: 80000,
-          max: 350000,
-          average: 215000,
+          min: 10000,
+          max: 20000,
+          average: 15000,
           currency: 'AED'
         },
         global: {
-          min: 65000,
-          max: 160000,
-          average: 112500,
+          min: 8000,
+          max: 13000,
+          average: 10500,
           currency: 'USD'
         }
       }
@@ -176,85 +176,87 @@ export const fieldData = {
         title: 'Data Scientist', 
         description: 'Extract insights from data using statistical methods and machine learning',
         hiringRate: 80,
-        marketAverage: 112500,
+        marketAverage: 10500,
         salaries: {
           egypt: { min: 24000, max: 54000, currency: 'EGP', average: 39000 },
-          gcc: { min: 120000, max: 250000, currency: 'AED', average: 185000 },
-          global: { min: 95000, max: 160000, currency: 'USD', average: 127500 }
+          gcc: { min: 10000, max: 20000, currency: 'AED', average: 15000 },
+          global: { min: 8000, max: 13500, currency: 'USD', average: 10500 }
         }
       },
       { 
         title: 'Data Analyst', 
         description: 'Analyze data to help organizations make informed decisions',
         hiringRate: 85,
-        marketAverage: 87500,
+        marketAverage: 7300,
         salaries: {
           egypt: { min: 18000, max: 40000, currency: 'EGP', average: 29000 },
-          gcc: { min: 80000, max: 180000, currency: 'AED', average: 130000 },
-          global: { min: 65000, max: 110000, currency: 'USD', average: 87500 }
+          gcc: { min: 7000, max: 15000, currency: 'AED', average: 11000 },
+          global: { min: 5500, max: 9000, currency: 'USD', average: 7300 }
         }
       },
       { 
         title: 'Business Intelligence Analyst', 
         description: 'Create dashboards and reports to track business performance',
         hiringRate: 77,
-        marketAverage: 97500,
+        marketAverage: 8100,
         salaries: {
           egypt: { min: 20000, max: 45000, currency: 'EGP', average: 32500 },
-          gcc: { min: 100000, max: 200000, currency: 'AED', average: 150000 },
-          global: { min: 75000, max: 120000, currency: 'USD', average: 97500 }
+          gcc: { min: 8500, max: 16500, currency: 'AED', average: 12500 },
+          global: { min: 6200, max: 10000, currency: 'USD', average: 8100 }
         }
       },
       { 
         title: 'Data Engineer', 
         description: 'Build and maintain data pipelines and infrastructure',
         hiringRate: 76,
-        marketAverage: 120000,
+        marketAverage: 10000,
         salaries: {
           egypt: { min: 28000, max: 58000, currency: 'EGP', average: 43000 },
-          gcc: { min: 140000, max: 280000, currency: 'AED', average: 210000 },
-          global: { min: 90000, max: 150000, currency: 'USD', average: 120000 }
+          gcc: { min: 12000, max: 23000, currency: 'AED', average: 17500 },
+          global: { min: 7500, max: 12500, currency: 'USD', average: 10000 }
         }
       },
       { 
         title: 'Analytics Manager', 
         description: 'Lead data analytics teams and strategies',
         hiringRate: 68,
-        marketAverage: 135000,
+        marketAverage: 11200,
         salaries: {
           egypt: { min: 40000, max: 75000, currency: 'EGP', average: 57500 },
-          gcc: { min: 200000, max: 350000, currency: 'AED', average: 275000 },
-          global: { min: 110000, max: 160000, currency: 'USD', average: 135000 }
+          gcc: { min: 17000, max: 30000, currency: 'AED', average: 23500 },
+          global: { min: 9000, max: 13500, currency: 'USD', average: 11200 }
         }
       }
     ],
-    skills: [
-      { name: 'Python/R', level: 'Advanced' },
-      { name: 'SQL', level: 'Advanced' },
-      { name: 'Data Visualization', level: 'Advanced' },
-      { name: 'Statistical Analysis', level: 'Advanced' },
-      { name: 'Machine Learning', level: 'Intermediate' },
-      { name: 'Data Wrangling', level: 'Advanced' },
-      { name: 'Big Data Technologies', level: 'Intermediate' },
-      { name: 'Business Acumen', level: 'Intermediate' }
-    ],
+skills: [
+    { name: 'Python/R', level: 'Advanced' },
+    { name: 'SQL', level: 'Advanced' },
+    { name: 'Data Visualization', level: 'Advanced' },
+    { name: 'Statistical Analysis', level: 'Advanced' },
+    { name: 'Machine Learning', level: 'Intermediate' },
+    { name: 'Data Wrangling', level: 'Advanced' },
+    { name: 'Big Data Technologies', level: 'Intermediate' },
+    { name: 'Business Acumen', level: 'Intermediate' },
+    { name: 'Cloud Platforms (AWS/GCP)', level: 'Intermediate' },
+    { name: 'Version Control / Git', level: 'Advanced' }
+],
     roadmap: [
       {
-        phase: 'Programming & Statistics',
+        phase: 'Programming & Statistics Foundations',
         duration: '2-3 months',
-        topics: ['Python/R Programming', 'SQL Fundamentals', 'Statistics & Probability', 'Excel Basics'],
+        topics: ['Python/R Programming', 'SQL Fundamentals', 'Statistics & Probability', 'Probability', 'Excel Basics'],
         videos: [
-          { title: 'Python for Data Science', url: 'https://www.youtube.com/watch?v=r-uOLxNrNk4' },
+          { title: 'Python for Data Science', url: 'https://www.youtube.com/watch?v=CMEWVn1uZpQ' },
           { title: 'SQL for Data Science', url: 'https://www.youtube.com/watch?v=HXV3zeQKqGY' }
         ]
       },
       {
-        phase: 'Data Analysis',
+        phase: 'Data Analysis & Visualization',
         duration: '3-4 months',
-        topics: ['Data Cleaning', 'Exploratory Data Analysis', 'Data Visualization', 'Statistical Testing'],
+        topics: ['Data Cleaning (Pandas)', 'Exploratory Data Analysis (EDA)', 'Data Visualization (Matplotlib/Seaborn)', 'Advanced Statistical Testing'],
         videos: [
-          { title: 'Data Analysis with Python', url: 'https://www.youtube.com/watch?v=r-uOLxNrNk4' },
-          { title: 'Data Visualization Tutorial', url: 'https://www.youtube.com/watch?v=a9UrKT0e0sk' }
+          { title: 'Data Analysis with Python', url: 'https://www.youtube.com/watch?v=r-uOLxNrNk8' },
+          { title: 'Data Visualization Tutorial', url: 'https://www.youtube.com/watch?v=eAjZAnsg9ek' }
         ]
       },
       {
@@ -262,8 +264,8 @@ export const fieldData = {
         duration: '4-6 months',
         topics: ['Supervised Learning', 'Unsupervised Learning', 'Model Evaluation', 'Feature Engineering'],
         videos: [
-          { title: 'Machine Learning for Data Science', url: 'https://www.youtube.com/watch?v=uzVoq9z7pYw' },
-          { title: 'Scikit-learn for Data Science', url: 'https://www.youtube.com/watch?v=0Lt9wBxqXA8' }
+          { title: 'Machine Learning for Data Science', url: 'https://youtu.be/i_LwzRVP7bg?si=fZiIXWqnZGLW3bNg' },
+          { title: 'Scikit-learn for Data Science', url: 'https://youtu.be/0B5eIE_1vpU?si=0cZjRz60FfV2FDEv' }
         ]
       },
       {
@@ -271,16 +273,16 @@ export const fieldData = {
         duration: '6-12 months',
         topics: ['Big Data', 'Deep Learning', 'Time Series Analysis', 'A/B Testing'],
         videos: [
-          { title: 'Big Data Technologies', url: 'https://www.youtube.com/watch?v=Ej_2yO9vCAQ' },
-          { title: 'Time Series Analysis', url: 'https://www.youtube.com/watch?v=JbdcN1T6fG0' }
+          { title: 'Big Data Technologies', url: 'https://www.youtube.com/watch?v=qMzkhHyH_u8' },
+          { title: 'Time Series Analysis', url: 'https://www.youtube.com/watch?v=axjgEgBgIY0' }
         ]
       }
     ],
     courses: [
-      { name: 'Data Science Specialization', platform: 'Coursera', topics: ['R Programming', 'Data Cleaning', 'Exploratory Analysis'] },
-      { name: 'Python for Data Science', platform: 'edX', topics: ['Python Basics', 'Data Analysis', 'Visualization'] },
-      { name: 'Data Analysis with Python', platform: 'DataCamp', topics: ['Pandas', 'NumPy', 'Data Manipulation'] },
-      { name: 'SQL for Data Science', platform: 'Udacity', topics: ['SQL Fundamentals', 'Database Design', 'Query Optimization'] }
+      { name: 'Google Advanced Data Analytics', platform: 'Coursera', topics: ['Python', 'Machine Learning', 'Statistical Analysis'] },
+      { name: 'IBM Data Science Professional Certificate', platform: 'Coursera', topics: ['Python Basics', 'Data Analysis', 'SQL'] },
+      { name: 'Harvard Data Science Professional Certificate', platform: 'edX', topics: ['R Programming', 'Probability', 'Machine Learning'] },
+      { name: 'DataCamp Data Scientist with Python', platform: 'DataCamp', topics: ['Pandas', 'Data Visualization', 'SQL'] }
     ]
   }
 };

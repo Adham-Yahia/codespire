@@ -10,9 +10,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #fff 0%, #ccc 100%);
   background-clip: text;
 }
 
@@ -111,7 +109,7 @@
 }
 
 .salary-ranges-section.dark {
-  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  background: #192129;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -119,11 +117,11 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #667eea;
+  color: black;
 }
 
 .salary-ranges-section.dark .salary-section-title {
-  color: #a78bfa;
+  color: #ccc;
 }
 
 /* Salary Region Cards */
@@ -206,7 +204,7 @@
 }
 
 .salary-region.dark .salary-value.salary-highlight {
-  color: #a78bfa;
+  color: orange;
 }
 
 /* Insights Section */
@@ -222,7 +220,7 @@
 }
 
 .insights-section.dark {
-  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  background: #192129;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -230,11 +228,11 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #667eea;
+  color: #000;
 }
 
 .insights-section.dark .insights-title {
-  color: #a78bfa;
+  color: #ccc;
 }
 
 .insight-card {

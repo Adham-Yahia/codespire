@@ -8,14 +8,15 @@
 }
 
 .footer.light {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
-  color: #202124;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9);
+  color: #334155;
+  border-top-color: #cbd5e1;
 }
 
 .footer.dark {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  color: #e0e7ff;
-  border-top-color: #6366f1;
+  background: #1c242f;
+  color: #e2e8f0;
+  border-top-color: #3b4d63;
 }
 
 /* Footer Content */
@@ -40,21 +41,23 @@
 /* Footer Title */
 .footer-title {
   margin: 0;
-  font-size: 1.1rem;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 1.15rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: 0.3px;
+  color: #0f172a;
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 .footer.dark .footer-title {
-  background: linear-gradient(135deg, #818cf8 0%, #c7d2fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;  font-size: 1.2rem; 
+  font-size: 1.15rem;
+  font-weight: 700; 
+  color: #ffffff !important; 
 
+
+}
 /* Brand Section */
 .brand-section {
   gap: 16px;
@@ -83,7 +86,8 @@
 
 .footer-link {
   font-size: 0.9rem;
-  color: #667eea;
+  color: #2563eb;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-flex;
@@ -92,7 +96,9 @@
 }
 
 .footer.dark .footer-link {
-  color: #818cf8;
+  color: #94a3b8;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+  
 }
 
 .footer-link:hover {
@@ -101,7 +107,7 @@
 }
 
 .footer.dark .footer-link:hover {
-  color: #c7d2fe;
+  color: #38bdf8;
 }
 
 .footer-link::before {
@@ -138,14 +144,28 @@
 }
 
 .footer.light .support-link {
-  background: rgba(102, 126, 234, 0.08);
-  color: #667eea;
+  background: rgba(37, 99, 235, 0.04);
+  color: #1e293b;
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.footer.light .footer-link {
+  color: #334155 ;
+}
+
+.footer.light .footer-link:hover {
+  color: #2563eb ;
+}
+
+.footer.light .support-link:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: #2563eb;
 }
 
 .footer.dark .support-link {
-  background: rgba(99, 102, 241, 0.15);
-  color: #c7d2fe;
-  border-color: #6366f1;
+  background: rgba(30, 41, 59, 0.7);
+  border-color: #334155;
+  color: #e2e8f0;
 }
 
 .support-link:hover {
@@ -155,9 +175,8 @@
 }
 
 .footer.dark .support-link:hover {
-  border-color: #818cf8;
-  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
-  background: rgba(99, 102, 241, 0.25);
+  background: rgba(51, 65, 85, 0.9);
+  border-color: #475569;
 }
 
 /* Facebook Link Specific */
@@ -221,7 +240,7 @@
 }
 
 .footer.dark .support-divider {
-  background: #6366f1;
+  background: #334155;
 }
 
 /* Footer Bottom */
@@ -232,7 +251,7 @@
 }
 
 .footer.dark .footer-bottom {
-  border-top-color: #6366f1;
+  border-top-color: #334155;
 }
 
 .footer-copyright {
@@ -300,6 +319,7 @@
     font-size: 0.8rem;
   }
 }
+
 
 @media (max-width: 576px) {
   .footer {

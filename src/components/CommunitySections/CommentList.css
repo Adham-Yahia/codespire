@@ -7,15 +7,14 @@
 .comments-empty {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
   border: 2px dashed rgba(102, 126, 234, 0.2);
   border-radius: 12px;
   animation: fadeIn 0.4s ease-out;
 }
 
 .comments-empty.dark {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
-  border-color: rgba(102, 126, 234, 0.3);
+  background: #262d3d ;
+  border-color: #36454f;
 }
 
 .empty-icon {
@@ -27,11 +26,11 @@
 .comments-empty h4 {
   margin: 16px 0 8px;
   font-weight: 600;
-  color: #667eea;
+  color: #000;
 }
 
 .comments-empty.dark h4 {
-  color: #a8b5f5;
+  color: #e8eaed;
 }
 
 .comments-empty p {
@@ -60,7 +59,7 @@
 }
 
 .comment-card.dark {
-  background: #1e1e1e;
+  background: #1a1f28;
   border-color: rgba(102, 126, 234, 0.25);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

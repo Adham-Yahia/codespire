@@ -9,9 +9,9 @@
 }
 
 .comment-form-container.dark {
-  background: #1e1e1e;
+  background: #1a1f28;
   border-color: rgba(102, 126, 234, 0.25);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.2);
 }
 
 .comment-form-container:hover {
@@ -31,14 +31,14 @@
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, black 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .form-title.text-light {
-  -webkit-text-fill-color: #a8b5f5;
+  -webkit-text-fill-color: #fff;
 }
 
 .form-subtitle {

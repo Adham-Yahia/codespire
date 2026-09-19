@@ -6,12 +6,6 @@ import './ComprehensiveStats.css';
 const ComprehensiveStats = ({ stats }) => {
   const { isDarkMode } = useTheme();
 
-  const getMarketDemandColor = (demand) => {
-    if (demand === 'Very High') return '#51cf66';
-    if (demand === 'High') return '#ffd43b';
-    return '#ff8787';
-  };
-
   const getJobGrowthTrend = (growth) => {
     if (growth > 20) return '📈 Rapid Growth';
     if (growth > 15) return '📈 Strong Growth';
@@ -43,7 +37,7 @@ const ComprehensiveStats = ({ stats }) => {
             <div className={`stat-card ${isDarkMode ? 'dark' : 'light'}`}>
               <div className="stat-icon">📈</div>
               <div className="stat-label">Avg. Hiring Rate</div>
-              <div className={`stat-value hiring-rate`} style={{ color: getMarketDemandColor('Very High') }}>
+              <div className="stat-value hiring-rate">
                 {stats.avgHiringRate}%
               </div>
               <div className="stat-description">Employment rate</div>
@@ -65,7 +59,7 @@ const ComprehensiveStats = ({ stats }) => {
             <div className={`stat-card ${isDarkMode ? 'dark' : 'light'}`}>
               <div className="stat-icon">🎯</div>
               <div className="stat-label">Market Demand</div>
-              <div className="stat-value" style={{ color: getMarketDemandColor(stats.marketDemand) }}>
+              <div className="stat-value">
                 {stats.marketDemand}
               </div>
               <div className="stat-description">Industry demand level</div>

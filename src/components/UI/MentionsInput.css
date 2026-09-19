@@ -1,0 +1,148 @@
+.mentions-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.mentions-textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  background: #ffffff;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.mentions-textarea:focus {
+  outline: none;
+  border-color: #334155;
+  box-shadow: 0 0 0 2px rgba(51, 65, 85, 0.15);
+}
+
+.mentions-textarea.dark {
+  background: #1a1f2e;
+  color: #f1f5f9;
+  border-color: #36454f;
+}
+
+.mentions-textarea.dark:focus {
+  border-color: #64748b;
+  box-shadow: 0 0 0 2px rgba(100, 116, 139, 0.25);
+}
+
+.mentions-textarea:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.mentions-textarea.dark:disabled {
+  background: #262d3d;
+  color: #64748b;
+}
+
+.mentions-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 4px;
+}
+
+.mentions-suggestions.dark {
+  background: #1a1f2e;
+  border-color: #36454f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+  background: #f1f5f9;
+}
+
+.suggestion-item.dark:hover,
+.suggestion-item.dark.active {
+  background: #262d3d;
+}
+
+.suggestion-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #334155;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.suggestion-info {
+  flex: 1;
+}
+
+.suggestion-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.suggestion-item.dark .suggestion-name {
+  color: #f1f5f9;
+}
+
+/* Scrollbar styling for suggestions */
+.mentions-suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mentions-suggestions::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.mentions-suggestions::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.mentions-suggestions::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.mentions-suggestions.dark::-webkit-scrollbar-track {
+  background: #262d3d;
+}
+
+.mentions-suggestions.dark::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.mentions-suggestions.dark::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

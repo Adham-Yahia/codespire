@@ -1,0 +1,31 @@
+.mention-text-wrapper {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.mention-tag {
+  display: inline-block;
+  color: #065fd4;
+  background: rgba(6, 95, 212, 0.08);
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin: 0 1px;
+  transition: all 0.2s ease;
+  user-select: text;
+}
+
+.mention-tag:hover {
+  background: rgba(6, 95, 212, 0.16);
+  color: #044397;
+}
+
+.mention-text-wrapper.dark .mention-tag {
+  color: #3ea6ff;
+  background: rgba(62, 166, 255, 0.12);
+}
+
+.mention-text-wrapper.dark .mention-tag:hover {
+  color: #70baff;
+  background: rgba(62, 166, 255, 0.22);
+}

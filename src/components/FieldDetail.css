@@ -128,8 +128,13 @@
   content: '';
   width: 4px;
   height: 28px;
-  background: blueviolet;
+  background: #334155;
   border-radius: 2px;
+}
+
+.dark-mode .field-detail h2::before,
+[data-theme='dark'] .field-detail h2::before {
+  background: #94a3b8;
 }
 
 /* ============================================
@@ -143,11 +148,12 @@
 .field-detail .row:first-child {
   margin-bottom: 56px;
   padding-bottom: 24px;
-  border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+  border-bottom: 2px solid #e2e8f0;
 }
 
-.dark-mode .field-detail .row:first-child {
-  border-bottom-color: rgba(102, 126, 234, 0.15);
+.dark-mode .field-detail .row:first-child,
+[data-theme='dark'] .field-detail .row:first-child {
+  border-bottom-color: #36454f;
 }
 
 /* ============================================

@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import FieldCard from './components/FieldCard';
+import Header     from './components/Header';
+import Hero       from './components/Hero';
+import FieldCard  from './components/FieldCard';
 import FieldDetail from './components/FieldDetail';
-import Community from './components/Community';
-import Footer from './components/Footer';
+import Community  from './components/Community';
+import Footer     from './components/Footer';
+import LoginPage    from './components/Auth/LoginPage';
+import RegisterPage from './components/Auth/RegisterPage';
+import ProfilePage  from './components/Auth/ProfilePage';
 import { fieldData } from './data/fieldData';
 import './components/DarkMode.css';
 
 function App() {
   const [selectedField, setSelectedField] = useState(null);
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage,   setCurrentPage]   = useState('home');
 
   const handleFieldSelect = (fieldId) => {
     setSelectedField(fieldId);
@@ -51,15 +54,28 @@ function App() {
             </Container>
           </>
         );
+
       case 'fieldDetail':
         return selectedField ? (
-          <FieldDetail 
-            field={fieldData[selectedField]} 
-            onBack={handleBackToFields} 
+          <FieldDetail
+            field={fieldData[selectedField]}
+            onBack={handleBackToFields}
           />
         ) : null;
+
       case 'community':
         return <Community />;
+
+      // ── Auth pages ──────────────────────────────────────────────
+      case 'login':
+        return <LoginPage    onNavigate={handleNavClick} />;
+
+      case 'register':
+        return <RegisterPage onNavigate={handleNavClick} />;
+
+      case 'profile':
+        return <ProfilePage  onNavigate={handleNavClick} />;
+
       default:
         return null;
     }

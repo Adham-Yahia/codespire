@@ -1,5 +1,7 @@
 /* ============================================
    CAREER OPPORTUNITIES - MODERN DESIGN
+   Clean neutral styling with natural dynamic indicators
+   Strictly no forced purple or bright red/orange colors
    ============================================ */
 
 .section-header {
@@ -10,26 +12,29 @@
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1e293b;
   margin: 0 0 12px;
+}
+
+.dark-mode .section-title,
+[data-theme='dark'] .section-title {
+  color: #e8eaed;
 }
 
 .section-subtitle {
   font-size: 1rem;
-  color: #666;
+  color: #64748b;
   margin: 0;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
-.dark-mode .section-subtitle {
+.dark-mode .section-subtitle,
+[data-theme='dark'] .section-subtitle {
   color: #bdc1c6;
 }
 
 /* ============================================
-   CAREERS CONTAINER
+   CAREERS CONTAINER & GRID
    ============================================ */
 
 .careers-container {
@@ -38,14 +43,14 @@
 
 .careers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px;
   padding: 0;
 }
 
 @media (max-width: 1200px) {
   .careers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
 
@@ -60,14 +65,16 @@
    ============================================ */
 
 .career-card {
-  background: #fff;
-  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 28px;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .career-card::before {
@@ -76,11 +83,16 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #5565ac 0%, #3c759e 100%);
+  height: 3px;
+  background: #334155;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
+}
+
+.dark-mode .career-card::before,
+[data-theme='dark'] .career-card::before {
+  background: #64748b;
 }
 
 .career-card.hovered::before {
@@ -88,30 +100,34 @@
 }
 
 .career-card.light {
-  background: #fff;
-  border-color: #e0e0e0;
+  background: #ffffff;
+  border-color: #e2e8f0;
 }
 
 .career-card.light:hover {
-  border-color: #667eea;
-  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.15);
-  transform: translateY(-8px);
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transform: translateY(-3px);
 }
 
-.career-card.dark {
-  background: #1a1f28;
-  border-color: #334155;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.career-card.dark,
+.dark-mode .career-card,
+[data-theme='dark'] .career-card {
+  background: #1a1f2e;
+  border-color: #36454f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.career-card.dark:hover {
-  border-color: #334155;
-  box-shadow: 0 4px 10px #334155;
-  transform: translateY(-8px);
+.career-card.dark:hover,
+.dark-mode .career-card:hover,
+[data-theme='dark'] .career-card:hover {
+  border-color: #475569;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-3px);
 }
 
 /* ============================================
-   CAREER HEADER
+   CAREER HEADER & HIRING RATE BADGE
    ============================================ */
 
 .career-header {
@@ -119,62 +135,50 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .career-title {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #202124;
+  color: #1e293b;
   flex: 1;
 }
 
-.dark-mode .career-title {
+.dark-mode .career-title,
+[data-theme='dark'] .career-title {
   color: #e8eaed;
 }
-
-/* ============================================
-   HIRING RATE BADGE
-   ============================================ */
 
 .hiring-rate-badge {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
-  border-radius: 12px;
+  padding: 6px 14px;
+  border-radius: 10px;
   min-width: 70px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  animation: slideInRight 0.4s ease-out;
+  border: 1px solid transparent;
+  box-shadow: none;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
 .hiring-rate-label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
   display: block;
   margin-bottom: 2px;
+  letter-spacing: 0.3px;
 }
 
 .hiring-rate-value {
-  font-size: 18px;
-  font-weight: 800;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
   display: block;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  line-height: 1.2;
 }
 
 /* ============================================
@@ -185,295 +189,223 @@
   font-size: 14px;
   line-height: 1.6;
   color: #5f6368;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
-.dark-mode .career-description {
+.dark-mode .career-description,
+[data-theme='dark'] .career-description {
   color: #bdc1c6;
 }
 
 /* ============================================
-   MARKET AVERAGE SECTION
+   MARKET AVERAGE SECTION (CLEAN NEUTRAL)
    ============================================ */
 
 .market-average-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  border: 2px solid rgba(102, 126, 234, 0.3);
-  border-radius: 12px;
-  padding: 12px 16px;
-  margin-bottom: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #334155;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
   gap: 12px;
 }
 
-.dark-mode .market-average-section {
-  background: #262d3d ;
+.dark-mode .market-average-section,
+[data-theme='dark'] .market-average-section {
+  background: #262d3d;
   border-color: #36454f;
+  border-left: 4px solid #94a3b8;
 }
 
 .market-average-label {
   font-size: 12px;
   font-weight: 700;
-  color: #000;
+  color: #475569;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
-.dark-mode .market-average-label {
-  color: #ccc;
+.dark-mode .market-average-label,
+[data-theme='dark'] .market-average-label {
+  color: #9aa0a6;
 }
 
 .market-average-value {
-  font-size: 16px;
-  font-weight: 800;
-  background: linear-gradient(135deg, #000 0%, #ccc 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.dark-mode .market-average-value,
+[data-theme='dark'] .market-average-value {
+  color: #e8eaed;
 }
 
 /* ============================================
-   SALARIES GRID
+   REGIONAL SALARIES GRID & COLUMNS
    ============================================ */
 
 .salaries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  gap: 10px;
+  margin-bottom: 16px;
 }
-
-.dark-mode .salaries-grid {
-  border-bottom-color: #36454f;
-}
-
-/* ============================================
-   SALARY COLUMN
-   ============================================ */
 
 .salary-column {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.04) 0%, rgba(118, 75, 162, 0.04) 100%);
-  border: 1px solid rgba(250, 251, 254, 0.12);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 14px;
+  padding: 12px 8px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.dark-mode .salary-column {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+.dark-mode .salary-column,
+[data-theme='dark'] .salary-column {
+  background: #262d3d;
   border-color: #36454f;
 }
 
-.career-card.hovered .salary-column {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
-  transform: scale(1.05);
+.career-card:hover .salary-column {
+  border-color: #cbd5e1;
+}
+
+.dark-mode .career-card:hover .salary-column,
+[data-theme='dark'] .career-card:hover .salary-column {
+  border-color: #475569;
+}
+
+.salary-column.egypt {
+  border-top: 2px solid #cbd5e1;
+}
+
+.dark-mode .salary-column.egypt,
+[data-theme='dark'] .salary-column.egypt {
+  border-top-color: #475569;
+}
+
+.salary-column.gcc {
+  border-top: 2px solid #94a3b8;
+}
+
+.dark-mode .salary-column.gcc,
+[data-theme='dark'] .salary-column.gcc {
+  border-top-color: #64748b;
+}
+
+.salary-column.global {
+  border-top: 2px solid #64748b;
+}
+
+.dark-mode .salary-column.global,
+[data-theme='dark'] .salary-column.global {
+  border-top-color: #94a3b8;
 }
 
 .region-flag {
-  font-size: 24px;
-  margin-bottom: 6px;
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 
 .region-name {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  color: #000;
+  color: #475569;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
-}
-
-.dark-mode .region-name {
-  color: #ccc;
-}
-
-.salary-range {
-  font-size: 12px;
-  font-weight: 700;
-  color: #676b80;
-  line-height: 1.4;
-  word-break: break-word;
   margin-bottom: 6px;
 }
 
-.dark-mode .salary-range {
+.dark-mode .region-name,
+[data-theme='dark'] .region-name {
+  color: #bdc1c6;
+}
+
+.salary-range {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.dark-mode .salary-range,
+[data-theme='dark'] .salary-range {
   color: #e8eaed;
 }
 
 .salary-average {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
-  color: #000;
-  margin-top: 4px;
-  padding-top: 4px;
-  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  color: #64748b;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #e2e8f0;
 }
 
-.dark-mode .salary-average {
-  color: #ccc;
-  border-top-color: rgba(102, 126, 234, 0.3);
-}
-
-/* ============================================
-   SALARY COMPARISON BAR
-   ============================================ */
-
-.salary-comparison {
-  padding: 12px 0;
-}
-
-.comparison-bar {
-  display: flex;
-  gap: 4px;
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.bar-segment {
-  flex: 1;
-  transition: all 0.3s ease;
-  border-radius: 2px;
-}
-
-.bar-segment.egypt {
-  background: rgb(203, 60, 60);
-  flex: 0.5;
-}
-
-.bar-segment.gcc {
-  background: rgb(191, 128, 12);
-  flex: 1;
-}
-
-.bar-segment.global {
-  background: rgb(13, 130, 13);
-  flex: 1.2;
-}
-
-.career-card.hovered .bar-segment {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.dark-mode .salary-average,
+[data-theme='dark'] .salary-average {
+  color: #9aa0a6;
+  border-top-color: #36454f;
 }
 
 /* ============================================
-   HIRING INDICATOR
+   HIRING RATE VISUAL PROGRESS INDICATOR
    ============================================ */
 
 .hiring-indicator {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 0;
-  margin-top: 8px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(102, 126, 234, 0.1);
+  padding-top: 14px;
+  margin-top: auto;
+  border-top: 1px solid #e2e8f0;
 }
 
-.dark-mode .hiring-indicator {
-  border-top-color: rgba(102, 126, 234, 0.2);
+.dark-mode .hiring-indicator,
+[data-theme='dark'] .hiring-indicator {
+  border-top-color: #36454f;
 }
 
 .hiring-bar-container {
   flex: 1;
-  height: 6px;
-  background: rgba(102, 126, 234, 0.1);
-  border-radius: 3px;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
   overflow: hidden;
 }
 
-.dark-mode .hiring-bar-container {
-  background: rgba(102, 126, 234, 0.15);
+.dark-mode .hiring-bar-container,
+[data-theme='dark'] .hiring-bar-container {
+  background: #262d3d;
 }
 
 .hiring-bar-fill {
   height: 100%;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px currentColor;
+  border-radius: 4px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
 }
 
 .hiring-percentage {
   font-size: 12px;
   font-weight: 600;
-  color: #000;
-  min-width: 110px;
+  color: #475569;
+  min-width: 105px;
   text-align: right;
 }
 
-.dark-mode .hiring-percentage {
-  color: #ccc;
+.dark-mode .hiring-percentage,
+[data-theme='dark'] .hiring-percentage {
+  color: #cbd5e1;
 }
 
-/* ============================================
-   CAREERS LEGEND
-   ============================================ */
 
-.careers-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-  border: 1px solid rgba(102, 126, 234, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 24px;
-}
-
-.careers-legend.dark {
-  background: #1c242f;
-  border-color: rgba(102, 126, 234, 0.2);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #5f6368;
-}
-
-.dark-mode .legend-item {
-  color: #bdc1c6;
-}
-
-.legend-indicator {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-}
-
-.legend-indicator.egypt {
-  background: red;
-}
-
-.legend-indicator.gcc {
-  background: green;
-}
-
-.legend-indicator.global {
-  background: blue;
-}
-
-.legend-indicator.hiring {
-  background: orange;
-}
-
-.legend-indicator.market-avg {
-  background: purple;
-}
-
-.legend-divider {
-  width: 2px;
-  height: 24px;
-  background: rgba(102, 126, 234, 0.2);
-}
 
 /* ============================================
    RESPONSIVE DESIGN
@@ -481,7 +413,7 @@
 
 @media (max-width: 1024px) {
   .career-card {
-    padding: 24px;
+    padding: 20px;
   }
 
   .section-title {
@@ -491,34 +423,19 @@
 
 @media (max-width: 768px) {
   .career-card {
-    padding: 20px;
+    padding: 18px;
   }
 
   .career-title {
-    font-size: 1.1rem;
-  }
-
-  .market-average-section {
-    flex-direction: column;
-    align-items: flex-start;
+    font-size: 1.15rem;
   }
 
   .salaries-grid {
-    gap: 10px;
-    padding-bottom: 16px;
+    gap: 8px;
   }
 
   .salary-column {
-    padding: 12px;
-  }
-
-  .region-flag {
-    font-size: 20px;
-    margin-bottom: 4px;
-  }
-
-  .region-name {
-    font-size: 11px;
+    padding: 10px 6px;
   }
 
   .salary-range {
@@ -529,24 +446,13 @@
     font-size: 10px;
   }
 
-  .hiring-indicator {
-    gap: 10px;
-  }
-
-  .hiring-percentage {
-    min-width: 100px;
-  }
-
-  .careers-legend {
-    gap: 12px;
-    padding: 16px;
+  .market-average-section {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
-  .legend-divider {
-    width: 100%;
-    height: 1px;
-  }
+
 
   .section-title {
     font-size: 1.5rem;
@@ -557,70 +463,20 @@
   }
 }
 
-@media (max-width: 480px) {
-  .career-card {
-    padding: 16px;
+@media (max-width: 540px) {
+  .salaries-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .career-header {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .hiring-rate-badge {
     align-self: flex-start;
   }
 
-  .salaries-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
 
-  .section-title {
-    font-size: 1.3rem;
-  }
-
-  .career-title {
-    font-size: 1rem;
-  }
-
-  .career-description {
-    font-size: 13px;
-  }
-}
-
-/* ============================================
-   DARK MODE SPECIFIC STYLING
-   ============================================ */
-
-.dark-mode .career-card {
-  border-color: rgba(102, 126, 234, 0.25);
-}
-
-.dark-mode .salary-column {
-  background:#1c242f;
-}
-
-.dark-mode .career-card.hovered .salary-column {
-  background: #2a333f;
-}
-
-/* ============================================
-   ACCESSIBILITY
-   ============================================ */
-
-.career-card:focus-within {
-  outline: 3px solid #667eea;
-  outline-offset: 2px;
-}
-
-.hiring-rate-badge {
-  position: relative;
-}
-
-/* Ensure text contrast in badges */
-@media (prefers-contrast: more) {
-  .hiring-rate-badge {
-    border: 2px solid rgba(255, 255, 255, 0.5);
-  }
 }

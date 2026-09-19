@@ -1,0 +1,119 @@
+/* ============================================================
+   RegisterPage.css — CodeSpire register form styles
+   Shares neutral card + page styles from LoginPage.css.
+   Strictly no purple/blue accents or glowing highlights.
+   ============================================================ */
+
+/* Specialization dropdown */
+.auth-select {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  background: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  color: #202124;
+  font-size: 0.92rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23475569' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+}
+
+.auth-select:focus {
+  border-color: #334155;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(51, 65, 85, 0.15);
+}
+
+.dark-mode .auth-select,
+[data-theme='dark'] .auth-select {
+  background-color: #262d3d;
+  border-color: #36454f;
+  color: #e8eaed;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239aa0a6' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.dark-mode .auth-select option,
+[data-theme='dark'] .auth-select option {
+  background: #1a2332;
+  color: #e8eaed;
+}
+
+.dark-mode .auth-select:focus,
+[data-theme='dark'] .auth-select:focus {
+  border-color: #64748b;
+  box-shadow: 0 0 0 2px rgba(100, 116, 139, 0.25);
+}
+
+/* Theme toggle row */
+.theme-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.theme-btn {
+  flex: 1;
+  padding: 0.6rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #dadce0;
+  background: #f8f9fa;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.theme-btn:hover:not(.active) {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+.theme-btn.active {
+  border-color: #334155;
+  background: #334155;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dark-mode .theme-btn,
+[data-theme='dark'] .theme-btn {
+  background: #262d3d;
+  border-color: #36454f;
+  color: #9aa0a6;
+}
+
+.dark-mode .theme-btn:hover:not(.active),
+[data-theme='dark'] .theme-btn:hover:not(.active) {
+  background: #1e293b;
+  border-color: #475569;
+  color: #e8eaed;
+}
+
+.dark-mode .theme-btn.active,
+[data-theme='dark'] .theme-btn.active {
+  border-color: #64748b;
+  background: #334155;
+  color: #ffffff;
+}
+
+/* Two-column row for short fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

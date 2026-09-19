@@ -1,0 +1,305 @@
+/* ============================================================
+   ProfilePage.css — CodeSpire user profile styles
+   Solid, neutral theme matching the rest of the website.
+   Strictly no purple/blue accents or glowing highlights.
+   ============================================================ */
+
+/* ── Page wrapper ─────────────────────────────────────────── */
+.profile-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem 4rem;
+  background-color: #f8fafc;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.profile-page.light,
+[data-theme='light'] .profile-page,
+body:not(.dark-mode) .profile-page {
+  background-color: #f8fafc;
+}
+
+.profile-page.dark,
+[data-theme='dark'] .profile-page,
+body.dark-mode .profile-page {
+  background-color: #0f1419;
+}
+
+/* ── Inner card ───────────────────────────────────────────── */
+.profile-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  animation: cardSlideIn 0.35s ease-out forwards;
+}
+
+.profile-card.light,
+[data-theme='light'] .profile-card,
+body:not(.dark-mode) .profile-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.profile-card.dark,
+[data-theme='dark'] .profile-card,
+body.dark-mode .profile-card {
+  background-color: #1a1f2e;
+  border: 1px solid #36454f;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Avatar ───────────────────────────────────────────────── */
+.profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  box-shadow: none;
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.dark-mode .profile-avatar,
+[data-theme='dark'] .profile-avatar {
+  background: #262d3d;
+  border-color: #36454f;
+  color: #e8eaed;
+}
+
+.profile-greeting {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+}
+
+.dark-mode .profile-greeting,
+[data-theme='dark'] .profile-greeting {
+  color: #e8eaed;
+}
+
+.profile-email {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.dark-mode .profile-email,
+[data-theme='dark'] .profile-email {
+  color: #9aa0a6;
+}
+
+/* ── Section divider title ────────────────────────────────── */
+.profile-section-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #475569;
+  margin-bottom: 0.75rem;
+}
+
+.dark-mode .profile-section-title,
+[data-theme='dark'] .profile-section-title {
+  color: #9aa0a6;
+}
+
+/* ── Success / error banners ──────────────────────────────── */
+.profile-success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  color: #16a34a;
+  font-size: 0.85rem;
+  margin-bottom: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-mode .profile-success,
+[data-theme='dark'] .profile-success {
+  background: rgba(74, 222, 128, 0.1);
+  border-color: rgba(74, 222, 128, 0.3);
+  color: #4ade80;
+}
+
+/* ── Specialization badge grid ────────────────────────────── */
+.spec-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+.spec-badge {
+  padding: 0.55rem 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #dadce0;
+  background: #f8f9fa;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.spec-badge:hover:not(.selected):not(:disabled) {
+  border-color: #cbd5e1;
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.spec-badge.selected {
+  border-color: #334155;
+  background: #334155;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dark-mode .spec-badge,
+[data-theme='dark'] .spec-badge {
+  background: #262d3d;
+  border-color: #36454f;
+  color: #9aa0a6;
+}
+
+.dark-mode .spec-badge:hover:not(.selected):not(:disabled),
+[data-theme='dark'] .spec-badge:hover:not(.selected):not(:disabled) {
+  border-color: #475569;
+  background: #1e293b;
+  color: #e8eaed;
+}
+
+.dark-mode .spec-badge.selected,
+[data-theme='dark'] .spec-badge.selected {
+  border-color: #64748b;
+  background: #334155;
+  color: #ffffff;
+}
+
+/* ── Save button ──────────────────────────────────────────── */
+.profile-save-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #334155;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 1.5rem;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profile-save-btn:hover:not(:disabled) {
+  background: #1e293b;
+  border-color: #1e293b;
+  box-shadow: none !important;
+}
+
+.profile-save-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.profile-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dark-mode .profile-save-btn,
+[data-theme='dark'] .profile-save-btn {
+  background: #334155;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+.dark-mode .profile-save-btn:hover:not(:disabled),
+[data-theme='dark'] .profile-save-btn:hover:not(:disabled) {
+  background: #475569;
+  border-color: #64748b;
+}
+
+/* ── Divider ──────────────────────────────────────────────── */
+.profile-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.75rem 0;
+}
+
+.dark-mode .profile-divider,
+[data-theme='dark'] .profile-divider {
+  border-top-color: #36454f;
+}
+
+/* ── Danger zone (sign out) ───────────────────────────────── */
+.profile-danger-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: none !important;
+}
+
+.profile-danger-btn:hover {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.dark-mode .profile-danger-btn,
+[data-theme='dark'] .profile-danger-btn {
+  border-color: #36454f;
+  color: #9aa0a6;
+}
+
+.dark-mode .profile-danger-btn:hover,
+[data-theme='dark'] .profile-danger-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: #f87171;
+}

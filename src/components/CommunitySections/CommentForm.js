@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useTheme } from '../../context/ThemeContext';
+import MentionsInput from '../UI/MentionsInput';
 import './CommentForm.css';
 
-const CommentForm = ({ selectedField, onFieldChange, onSubmit }) => {
+const CommentForm = ({ selectedField, onFieldChange, onSubmit, disabled = false, availableUsers = [] }) => {
   const { isDarkMode } = useTheme();
   const [commentText, setCommentText] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (commentText.trim()) {
-      setIsSubmitting(true);
-      setTimeout(() => {
-        onSubmit({
-          text: commentText,
-          field: selectedField === 'all' ? 'ai' : selectedField
-        });
-        setCommentText('');
-        setIsSubmitting(false);
-      }, 300);
-    }
+    if (disabled || !commentText.trim()) return;
+    
+    const textToSubmit = commentText.trim();
+    setCommentText(''); // Instant clear for zero-delay optimistic UX
+    onSubmit({
+      text: textToSubmit,
+      field: selectedField === 'all' ? 'ai' : selectedField
+    });
   };
 
   const handleFieldChange = (e) => {
@@ -43,15 +41,14 @@ const CommentForm = ({ selectedField, onFieldChange, onSubmit }) => {
           <Form.Label className={`form-label ${isDarkMode ? 'text-light' : ''}`}>
             Your Comment
           </Form.Label>
-          <Form.Control
-            as="textarea"
-            rows={4}
+          <MentionsInput
             value={commentText}
-            onChange={(e) => setCommentText(e.target.value)}
-            placeholder="Share your experience, ask questions, provide insights, or discuss career paths..."
-            className={`comment-textarea ${isDarkMode ? 'dark' : ''}`}
-            disabled={isSubmitting}
-            maxLength={2000}
+            onChange={setCommentText}
+            placeholder="Share your experience, ask questions, provide insights, or discuss career paths... Use @username to mention others"
+            rows={4}
+            disabled={isSubmitting || disabled}
+            isDarkMode={isDarkMode}
+            availableUsers={availableUsers}
           />
           <div className={`char-counter ${isDarkMode ? 'text-muted' : 'text-secondary'}`}>
             {commentText.length}/2000
@@ -79,7 +76,7 @@ const CommentForm = ({ selectedField, onFieldChange, onSubmit }) => {
             <Button
               variant="primary"
               type="submit"
-              disabled={isSubmitting || !commentText.trim()}
+              disabled={isSubmitting || !commentText.trim() || disabled}
               className="submit-button"
             >
               {isSubmitting ? (

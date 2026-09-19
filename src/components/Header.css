@@ -1,0 +1,228 @@
+/* ============================================================
+   Header.css — CodeSpire navbar button styles
+   Theme-aware: dark mode = white text/borders, light mode = black
+   ============================================================ */
+
+/* ── Profile chip (clean neutral styling matching theme) ── */
+.nav-profile-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #1e293b;
+}
+
+.nav-profile-btn:hover {
+  background: #e2e8f0 !important;
+  border-color: #94a3b8;
+}
+
+.dark-mode .nav-profile-btn,
+[data-theme='dark'] .nav-profile-btn {
+  color: #e8eaed;
+  background: #262d3d;
+  border-color: #36454f;
+}
+
+.dark-mode .nav-profile-btn:hover,
+[data-theme='dark'] .nav-profile-btn:hover {
+  background: #334155 !important;
+  border-color: #475569;
+}
+
+/* ── Hamburger Menu (Menu Toggle) Button Styling ── */
+.codespire-navbar .navbar-toggler,
+.menu-toggle-btn {
+  border-radius: 8px !important;
+  padding: 0.35rem 0.75rem !important;
+  transition: all 0.2s ease !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.codespire-navbar .navbar-toggler:focus,
+.codespire-navbar .navbar-toggler:focus-visible,
+.codespire-navbar .navbar-toggler:active,
+.codespire-navbar .navbar-toggler:hover,
+.menu-toggle-btn:focus,
+.menu-toggle-btn:focus-visible,
+.menu-toggle-btn:active,
+.menu-toggle-btn:hover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Light Mode: Hamburger Menu Toggle is BLACK */
+.codespire-navbar:not(.bg-dark) .navbar-toggler,
+[data-theme='light'] .navbar-toggler,
+body:not(.dark-mode) .navbar-toggler,
+.menu-toggle-btn.light {
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+.codespire-navbar:not(.bg-dark) .navbar-toggler:hover,
+[data-theme='light'] .navbar-toggler:hover,
+body:not(.dark-mode) .navbar-toggler:hover,
+.menu-toggle-btn.light:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  border-color: #000000 !important;
+}
+
+/* SVG icon inside hamburger toggle in light mode — pure black strokes */
+.codespire-navbar:not(.bg-dark) .navbar-toggler-icon,
+[data-theme='light'] .navbar-toggler-icon,
+body:not(.dark-mode) .navbar-toggler-icon,
+.menu-toggle-btn.light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23000000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dark Mode: Hamburger Menu Toggle is WHITE */
+.codespire-navbar.bg-dark .navbar-toggler,
+[data-theme='dark'] .navbar-toggler,
+body.dark-mode .navbar-toggler,
+.menu-toggle-btn.dark {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.codespire-navbar.bg-dark .navbar-toggler:hover,
+[data-theme='dark'] .navbar-toggler:hover,
+body.dark-mode .navbar-toggler:hover,
+.menu-toggle-btn.dark:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+}
+
+.codespire-navbar.bg-dark .navbar-toggler-icon,
+[data-theme='dark'] .navbar-toggler-icon,
+body.dark-mode .navbar-toggler-icon,
+.menu-toggle-btn.dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ── Sign In Button (Ghost button) ── */
+.nav-ghost-btn {
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+/* Light mode — Sign In is BLACK */
+.nav-ghost-btn.light,
+[data-theme='light'] #header-login-btn,
+body:not(.dark-mode) #header-login-btn {
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+  background: transparent !important;
+}
+
+.nav-ghost-btn.light:hover,
+[data-theme='light'] #header-login-btn:hover,
+body:not(.dark-mode) #header-login-btn:hover {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Dark mode — Sign In is WHITE */
+.nav-ghost-btn.dark,
+[data-theme='dark'] #header-login-btn,
+body.dark-mode #header-login-btn {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+.nav-ghost-btn.dark:hover,
+[data-theme='dark'] #header-login-btn:hover,
+body.dark-mode #header-login-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Danger variant (Sign out) */
+.nav-ghost-btn--danger.light {
+  border-color: rgba(180, 30, 50, 0.4) !important;
+  color: rgba(180, 30, 50, 0.9) !important;
+}
+.nav-ghost-btn--danger.light:hover {
+  background: rgba(180, 30, 50, 0.08) !important;
+  border-color: #b41e32 !important;
+  color: #b41e32 !important;
+}
+.nav-ghost-btn--danger.dark {
+  border-color: rgba(255, 92, 124, 0.4) !important;
+  color: rgba(255, 150, 165, 0.9) !important;
+}
+.nav-ghost-btn--danger.dark:hover {
+  background: rgba(255, 92, 124, 0.15) !important;
+  border-color: #ff8fa3 !important;
+  color: #ff8fa3 !important;
+}
+
+/* ── "Get Started" Button ───────────────────────────────────────────
+   Matches the exact same color and styling as the Menu Toggle button
+   across all themes (Light and Dark modes).
+   ─────────────────────────────────────────────────────────────────── */
+.nav-primary-btn {
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-shadow: none;
+}
+
+/* Light mode — matches Menu Toggle in Light Mode (BLACK border & text) */
+.nav-primary-btn.light,
+[data-theme='light'] #header-register-btn,
+body:not(.dark-mode) #header-register-btn {
+  background: transparent !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+}
+
+.nav-primary-btn.light:hover,
+[data-theme='light'] #header-register-btn:hover,
+body:not(.dark-mode) #header-register-btn:hover {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Dark mode — matches Menu Toggle in Dark Mode (WHITE border & text) */
+.nav-primary-btn.dark,
+[data-theme='dark'] #header-register-btn,
+body.dark-mode #header-register-btn {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.nav-primary-btn.dark:hover,
+[data-theme='dark'] #header-register-btn:hover,
+body.dark-mode #header-register-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
